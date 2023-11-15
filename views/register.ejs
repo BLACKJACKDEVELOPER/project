@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<body>
+    <%- include("header.ejs"); %>
+
+    <!-- component -->
+    <section class="flex justify-center items-center mt-20 bg-white">
+        <div class="max-w-3xl sm:w-11/12 lg:w-full bg-gray-900 rounded p-6 space-y-4">
+            <div class="mb-4">
+                <p class="text-gray-400">สมัครสมาชิก</p>
+                <h5 class="text-xl font-bold text-white">กรอกรายละเอียดให้ครบถ้วน</h5>
+            </div>
+            <div>
+                <input
+                    class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                    type="text" placeholder="Firstname" id="fname">
+            </div>
+            <div>
+                <input
+                    class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                    type="text" placeholder="Lastname" id="lname">
+            </div>
+            <div>
+                <input
+                    class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                    type="text" placeholder="Email" id="email">
+            </div>
+            <div>
+                <input
+                    class="w-full p-4 text-sm bg-gray-50 focus:outline-none border border-gray-200 rounded text-gray-600"
+                    type="text" placeholder="Password" id="password">
+            </div>
+            <div class="flex flex-row items-center">
+                <input type="checkbox"
+                    class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded">
+                <label for="comments" class="ml-2 text-sm font-normal text-gray-400">ฉันยอมรับข้อกำหนด</label>
+            </div>
+            <div>
+                <button
+                    onclick="init.register()"
+                    class="w-full py-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200">ตกลง</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <%- include("footer.ejs"); %>
+</body>
+<script src="js/register.js"></script>
+</html>

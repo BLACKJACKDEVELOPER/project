@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="css/etc.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+   
+
+    <% if (data.login) { %>
+        <!-- component -->
+        <header>
+            <nav class="bg-gray-800 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                    <a href="/" class="flex items-center">
+                        <img src="img/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                        <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Retex</span>
+                    </a>
+                    <div class="flex items-center">
+                        <img class="rounded-full mr-2" onclick="window.location.href = '/profile?id=<%= data.uid %>';" width="40" src="img/<%= data.profile %>" alt="">
+
+                        <img onclick="window.location.href = '/notify';" src="img/bell.png" width="20" alt="">
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <% }else{ %>
+            <!-- component -->
+            <header>
+                <nav class="bg-gray-800 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+                    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                        <a href="/" class="flex items-center">
+                            <img src="img/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+                            <span class="self-center text-xl font-semibold whitespace-nowrap text-white">Retex</span>
+                        </a>
+                        <div class="flex items-center lg:order-2">
+                            <a href="/login"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                เข้าสู่ระบบ
+                            </a>
+                            <a href="/register"
+                                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                                ลงทะเบียน
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <% } %>
+                
+            </div>
+            <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
