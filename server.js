@@ -1,4 +1,4 @@
-const app = require(".middleware")
+const app = require("./middleware")
 
 // external routes *
 const index = require("./routes/index.js")
