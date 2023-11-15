@@ -1,4 +1,4 @@
-const {app,server} = require("./socket/server")
+const app = require(".middleware")
 
 // external routes *
 const index = require("./routes/index.js")
@@ -30,6 +30,6 @@ app.route("/notify")
 .get(bell.get)
 
 // start server
-server.listen(3000,()=> {
+app.listen(3000,()=> {
     console.log("Server start on port 3000")
 })
